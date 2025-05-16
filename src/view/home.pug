@@ -1,0 +1,17 @@
+extends ./layout/layout
+
+block stylesheet
+  link(rel="stylesheet", href="/style/css/home.css")
+
+block content 
+  h1 Ajouter un utilisateur
+
+  form(action="/" method="POST", class="user-card")
+    label(for="name") Prénom:
+    input(type="text" name="name" required)
+
+    label(for="birthdate") Date de naissance :
+    input(type="date" name="birthdate" required)
+
+    button(type="submit") Envoyer
+

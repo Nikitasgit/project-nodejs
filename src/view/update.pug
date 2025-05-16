@@ -1,0 +1,13 @@
+extends ./layout/layout
+
+block content
+  h1 Modifier un utilisateur
+
+  form(method="POST", action=`/users/update/${id}`, class="user-card")
+    label(for="name") Nom :
+    input(type="text", name="name", value=user.name, required)
+
+    label(for="birthdate") Date de naissance :
+    input(type="date", name="birthdate", value=user.birth, required)
+
+    button(type="submit") Mettre à jour

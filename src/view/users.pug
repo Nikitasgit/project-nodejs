@@ -1,0 +1,15 @@
+extends ./layout/layout
+
+block stylesheet
+  link(rel="stylesheet", href="/style/css/users.css")
+
+block content
+  h1 Utilisateurs
+
+  ul.users-container
+    each user, index in users
+      li.user-card
+        | Nom: #{user.name} - Date de naissance: #{user.birth}
+        a(href=`/users/update/${index}`) Modifier
+        form(method="POST", action=`/users/delete/${index}`)
+          button(type="submit") Supprimer

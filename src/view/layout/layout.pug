@@ -1,0 +1,42 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    title Application d'utilisateurs
+    link(rel="stylesheet", href="/style/css/style.css")
+    block stylesheet
+    link(rel="stylesheet", href="/style/nav.css")
+
+body
+  header
+    include ../nav.pug
+
+  main
+    if error
+      #error= error
+    
+    if toast
+      #toast= toast
+    
+    block content
+
+
+block scripts
+  script.
+    function makeMessageDisapear(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.style.opacity = 1;
+        setTimeout(() => {
+          el.style.opacity = 0;
+        }, 5000);
+      }
+    }
+
+   makeMessageDisapear('toast');
+    makeMessageDisapear('error');
+
+
+
+    
+

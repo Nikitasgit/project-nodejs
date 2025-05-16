@@ -1,0 +1,8 @@
+nav {
+  padding: 20px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}

@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  padding: 0 20px;
+}
+button,
+input {
+  padding: 5px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+
+#toast {
+  color: green;
+  background: white;
+}
+#error {
+  color: red;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
